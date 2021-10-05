@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+<section class="py-4" style="background-image: url('../static/assets/resume.jpg');">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6" style="height: 300px;">
+                <div class="container">
+                    <form action="evaluate" method="POST" enctype="multipart/form-data">
+                        <div>
+                            <br></br>
+                            <label style="background-color: rgb(200, 203, 209);">Add List of Skillsets</label>
+                            <br></br>
+                            <input class="form-control" id="skillset" name="skillset" aria-describedby="emailHelp"
+                                placeholder="Skill Sets Should be Comma Seperated">
+                        </div>
+                        <br>
+                        <div>
+                            <label style="background-color: rgb(200, 203, 209);">Upload Resumes</label>
+                            <br></br>
+                            <input type="file" id="file" name="file" multiple style="background-color: aliceblue;">
+                            <br></br>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
